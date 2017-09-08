@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="index.php?p=Admin&c=Brand&a=edit" method="post">
+    <input type="hidden" name="id" value="<?php echo $id ?>">
+    名称：<input type="text" name="name" value="<?php echo $name ?>"/><br/>
+    LOGO：<input type="file" name="logo"/><br/>
+    简介：<textarea name="intro"><?php echo $intro ?></textarea> <br/>
+    <input type="submit" value="提交"/><br/>
+</form>
+</body>
+</html>

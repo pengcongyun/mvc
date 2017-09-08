@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品分类列表</title>
+</head>
+<body>
+<a href="index.php?p=Admin&c=Category&a=add">添加商品分类</a>
+<table border="1px" width="80%">
+    <tr>
+        <th>ID</th>
+        <th>分类名称</th>
+        <th>父分类ID</th>
+        <th>分类简介</th>
+        <th>操作</th>
+    </tr>
+    <?php foreach($rows as $row):?>
+    <tr>
+        <td><?php echo $row['id']?></td>
+        <td><?php echo $row['name_txt']?></td>
+        <td><?php echo $row['parent_id']?></td>
+        <td><?php echo $row['intro']?></td>
+        <td>
+            <a href="index.php?p=Admin&c=Category&a=delete&id=<?php echo $row['id'];?>">删除</a>
+            <a href="index.php?p=Admin&c=Category&a=edit&id=<?php echo $row['id'];?>">编辑</a>
+        </td>
+    </tr>
+    <?php endForeach;?>
+</table>
+</body>
+</html>
